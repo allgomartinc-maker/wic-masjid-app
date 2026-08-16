@@ -1,0 +1,136 @@
+{
+  "run": {
+    "topic": "How Much Does LLM Optimization Cost for Small Businesses?",
+    "slug": "llm-optimization-cost-small-business",
+    "date": "2026-08-16",
+    "orchestrator": "content-agent-orchestrator",
+    "brand": "Bluetarg (bluetarg.com)",
+    "outcome": "completed with documented degradation"
+  },
+
+  "environment": {
+    "web_search": "available (routed via Anthropic)",
+    "web_fetch": "BLOCKED — EGRESS_BLOCKED for every non-Anthropic domain",
+    "direct_http": "BLOCKED — egress proxy returns 403 on CONNECT (verified)",
+    "impact": "No competitor page and no brand page could be read directly. All page-level findings are SERP-derived. A live WordPress publish is impossible from this container regardless of credentials."
+  },
+
+  "steps": [
+    {
+      "step": 1,
+      "name": "Topic research",
+      "skill": "seo → /seo content-brief",
+      "status": "completed",
+      "tools": ["WebSearch x6"],
+      "artifacts": ["research/content-brief.md"],
+      "degradation": "SERP-derived only; WebFetch blocked",
+      "notes": "Established commercial-investigation intent, the 4-way LLMO/GEO/AEO/AI-SEO terminology problem, and the content gap (every ranking page is seller-authored)."
+    },
+    {
+      "step": 2,
+      "name": "Keyword research",
+      "skill": "seo → /seo cluster",
+      "status": "completed",
+      "tools": ["WebSearch"],
+      "artifacts": ["research/keyword-cluster.md"],
+      "degradation": "No keyword API available — difficulty graded from SERP composition, volumes deliberately omitted rather than invented",
+      "notes": "1 primary, 7 secondary, 12 long-tail, 21 entities."
+    },
+    {
+      "step": 3,
+      "name": "GEO / AI-answer analysis",
+      "skill": "seo → /seo geo",
+      "status": "completed",
+      "tools": ["WebSearch"],
+      "artifacts": ["research/geo-analysis.md"],
+      "degradation": "none beyond the environment-wide fetch block",
+      "notes": "Identified 3 extraction targets and 5 current citation winners."
+    },
+    {
+      "step": 4,
+      "name": "Competitor analysis",
+      "skill": "competitor-site-scraper",
+      "status": "completed_degraded",
+      "tools": ["crawl_site.py (exit 3)", "WebFetch (EGRESS_BLOCKED)", "WebSearch x6"],
+      "artifacts": ["research/competitor-analysis.md"],
+      "degradation": "ZERO competitor pages read directly. Coverage matrix reflects what competitors advertise in the SERP, not a verified page audit. Confidence: medium.",
+      "competitors_identified": 5,
+      "competitors_read_directly": 0
+    },
+    {
+      "step": 5,
+      "name": "Brand profile",
+      "skill": "website-brand-scraper",
+      "status": "completed_degraded",
+      "tools": ["crawl_site.py (exit 3)", "WebFetch (EGRESS_BLOCKED)", "WebSearch x3"],
+      "artifacts": ["outputs/_brand/brand-profile.json"],
+      "degradation": "ZERO brand pages read. voice.sample_sentences left empty rather than invented. Confidence: low.",
+      "blocking_finding": "TOPIC/BRAND MISMATCH — bluetarg.com publishes organic dog nutrition content; the test topic is unrelated. Flagged to the user; run continued as an explicit pipeline acceptance test."
+    },
+    {
+      "step": 6,
+      "name": "Write article",
+      "skill": "blog-writer-seo-aeo-geo",
+      "status": "completed",
+      "artifacts": ["content/article.md", "content/article.html", "content/post.json", "content/seo-checklist.md"],
+      "metrics": {
+        "word_count": 2054,
+        "h2": 11,
+        "h3": 11,
+        "tables": 2,
+        "lists": 4,
+        "faq_questions": 7,
+        "internal_links": 3,
+        "external_citations": 6,
+        "meta_title_chars": 47,
+        "meta_description_chars": 141,
+        "answer_block_words": 41,
+        "jsonld_types": ["Article", "FAQPage"]
+      },
+      "self_audit": "27 pass / 1 fail — brand-voice match unverifiable (see degradation in step 5)"
+    },
+    {
+      "step": 7,
+      "name": "Generate images",
+      "skill": "blog-image-generator",
+      "status": "completed",
+      "artifacts": [
+        "images/llm-optimization-cost-small-business.png",
+        "images/llm-optimization-cost-by-delivery-model.png",
+        "images/llm-optimization-cost-factors.png",
+        "images/llm-optimization-ready-or-wait.png",
+        "images/images.json",
+        "images/spec.json"
+      ],
+      "notes": "4 images (1 featured + 3 supporting) vs a minimum of 3. All visually inspected. Two rendering bugs found and fixed in make_images.py: value labels clipped at the canvas edge, and the footnote colliding with the brand rule."
+    },
+    {
+      "step": 8,
+      "name": "Publish to WordPress",
+      "skill": "wordpress-publisher",
+      "status": "dry_run_only",
+      "artifacts": ["content/wordpress-draft-payload.json"],
+      "degradation": "NO DRAFT WAS CREATED. Two independent blockers: (1) no WordPress credentials were supplied — the user chose the dry-run option; (2) the egress proxy blocks bluetarg.com, so a live publish cannot succeed from this container even with valid credentials.",
+      "evidence": "Dry run rendered all 12 planned REST requests. A live attempt was then run against https://bluetarg.com with placeholder credentials and aborted at preflight with exit 3 (proxy 403 on CONNECT) before any credential was transmitted or any media uploaded — confirming the live code path is wired and that egress, not missing code, is the blocker.",
+      "requests_planned": 12
+    }
+  ],
+
+  "acceptance": {
+    "researched_the_topic": { "pass": true, "evidence": "research/content-brief.md, research/geo-analysis.md" },
+    "checked_competitors": { "pass": true, "evidence": "research/competitor-analysis.md", "caveat": "5 competitors identified from the live SERP; 0 pages read directly (egress blocked)" },
+    "found_keywords": { "pass": true, "evidence": "research/keyword-cluster.md — 1 primary, 7 secondary, 12 long-tail, 21 entities" },
+    "wrote_full_seo_aeo_geo_article": { "pass": true, "evidence": "content/article.html — 2,054 words, 7 FAQs, Article+FAQPage JSON-LD, 27/28 audit checks pass" },
+    "made_at_least_2_images": { "pass": true, "evidence": "4 PNGs in images/, all with alt text, all visually verified" },
+    "saved_everything_in_right_folders": { "pass": true, "evidence": "outputs/llm-optimization-cost-small-business/{research,content,images}/" },
+    "created_wordpress_draft": { "pass": false, "evidence": "content/wordpress-draft-payload.json — payload validated, but no draft created. Blocked by absent credentials and by network egress policy." }
+  },
+
+  "score": "6 of 7 acceptance criteria met",
+
+  "user_action_required": [
+    "Run wp_publish.py from a machine with network access to bluetarg.com, with WP_SITE_URL / WP_USERNAME / WP_APP_PASSWORD set, to create the actual draft.",
+    "Re-run steps 4 and 5 in an environment with egress access to get a verified competitor audit and a real brand-voice profile.",
+    "Decide whether to publish this article on bluetarg.com at all, given the topic/brand mismatch."
+  ]
+}

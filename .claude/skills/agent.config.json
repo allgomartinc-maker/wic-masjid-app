@@ -1,0 +1,65 @@
+{
+  "$comment": "Single source of truth for the SEO+AEO+GEO blog agent. Every skill reads this file instead of hardcoding a brand. Change these values to point the agent at a different site; no SKILL.md edits required.",
+
+  "brand": {
+    "name": "Bluetarg",
+    "site_url": "https://bluetarg.com",
+    "tagline": "Your Guide to Organic Dog Nutrition",
+    "locale": "en-US",
+    "voice_profile_path": "outputs/_brand/brand-profile.json",
+    "$comment": "voice_profile_path is written by the website-brand-scraper skill and read by the blog writer."
+  },
+
+  "competitors": {
+    "$comment": "Brand-level rivals. The orchestrator ALSO discovers topic-level rivals from the live SERP for each run, and merges the two lists.",
+    "seed_urls": [],
+    "max_per_run": 5
+  },
+
+  "wordpress": {
+    "site_url_env": "WP_SITE_URL",
+    "username_env": "WP_USERNAME",
+    "app_password_env": "WP_APP_PASSWORD",
+    "$comment": "Credentials are read from these environment variables ONLY. Never commit real credentials to this file.",
+    "default_status": "draft",
+    "default_author_id": null,
+    "default_categories": [],
+    "default_tags": [],
+    "upload_images": true,
+    "set_featured_image": true
+  },
+
+  "output": {
+    "root": "outputs",
+    "$comment": "Per-run layout: outputs/<topic-slug>/{research,content,images}/ plus run-manifest.json",
+    "subdirs": ["research", "content", "images"]
+  },
+
+  "content_defaults": {
+    "target_word_count": 1800,
+    "min_word_count": 1400,
+    "max_word_count": 2600,
+    "reading_level": "grade 8-10",
+    "faq_min_questions": 5,
+    "internal_links_min": 3,
+    "external_citations_min": 4,
+    "meta_title_max_chars": 60,
+    "meta_description_max_chars": 155
+  },
+
+  "images": {
+    "featured": { "width": 1200, "height": 630 },
+    "supporting": { "width": 1200, "height": 800 },
+    "min_supporting": 2,
+    "format": "png",
+    "palette": {
+      "ink": "#0F2436",
+      "surface": "#FFFFFF",
+      "muted": "#5A6B7B",
+      "accent": "#1F7A8C",
+      "accent_soft": "#DCEEF2",
+      "wash": "#F4F8FA"
+    },
+    "$comment": "Palette is brand-neutral by default. Replace with the brand's real colors once website-brand-scraper has extracted them."
+  }
+}

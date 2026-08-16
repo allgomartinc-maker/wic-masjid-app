@@ -1,0 +1,90 @@
+{
+  "brand": { "name": "Bluetarg", "site": "bluetarg.com" },
+  "palette": {
+    "ink": "#0F2436",
+    "surface": "#FFFFFF",
+    "muted": "#5A6B7B",
+    "accent": "#1F7A8C",
+    "accent_soft": "#DCEEF2",
+    "wash": "#F4F8FA"
+  },
+  "images": [
+    {
+      "type": "featured",
+      "role": "featured",
+      "filename": "llm-optimization-cost-small-business.png",
+      "width": 1200,
+      "height": 630,
+      "eyebrow": "2026 pricing guide",
+      "title": "How Much Does LLM Optimization Cost for Small Businesses?",
+      "subtitle": "$29 to $5,000 per month — what each tier actually buys",
+      "alt": "Guide to LLM optimization costs for small businesses in 2026"
+    },
+    {
+      "type": "bar_chart",
+      "role": "supporting",
+      "filename": "llm-optimization-cost-by-delivery-model.png",
+      "width": 1200,
+      "height": 800,
+      "title": "Monthly cost by delivery model",
+      "subtitle": "Typical small-business ranges, as of August 2026",
+      "series": [
+        { "label": "DIY tools", "value": 250, "note": "$29–$250/mo" },
+        { "label": "Freelancer", "value": 2000, "note": "$500–$2,000/mo" },
+        { "label": "AI-assisted", "value": 999, "note": "$800–$999/mo" },
+        { "label": "Agency", "value": 5000, "note": "$1,500–$5,000/mo" }
+      ],
+      "footnote": "Bars show the top of each published range. Sources: WebFX, TeamAI, Gushwork, Stackmatix, Indexly (2026).",
+      "alt": "Monthly LLM optimization cost 2026: DIY $29-250, freelancer $500-2,000, AI-assisted $800-999, agency $1,500-5,000",
+      "caption": "Top of the published monthly range for each delivery model, 2026."
+    },
+    {
+      "type": "checklist",
+      "role": "supporting",
+      "filename": "llm-optimization-cost-factors.png",
+      "width": 1200,
+      "height": 800,
+      "numbered": true,
+      "title": "5 factors that move an LLM optimization quote",
+      "items": [
+        "Engine coverage — tracking 3 LLMs costs far less than tracking 7",
+        "Prompt volume — 20–30 tracked prompts vs 80–200",
+        "Content production — monitoring is cheap, publishing is not",
+        "Technical health — no schema or thin content means remediation first",
+        "Markets — tracking 3 markets can roughly double the price"
+      ],
+      "alt": "Five factors driving LLM optimization price: engine coverage, prompt volume, content output, technical health, markets",
+      "caption": "The five variables that explain most of the gap between two quotes."
+    },
+    {
+      "type": "comparison",
+      "role": "supporting",
+      "filename": "llm-optimization-ready-or-wait.png",
+      "width": 1200,
+      "height": 800,
+      "title": "Ready to buy, or fix the free things first?",
+      "columns": [
+        {
+          "heading": "Wait — do these first (free)",
+          "items": [
+            "Thin site with little substantive content",
+            "Google Business Profile incomplete, few reviews",
+            "Already paying for SEO — check the overlap",
+            "Cannot commit to at least 90 days"
+          ]
+        },
+        {
+          "heading": "Ready for a retainer",
+          "items": [
+            "Customers ask questions an AI assistant answers",
+            "Competitors already named in those answers",
+            "Real content foundation to build on",
+            "Budget sustainable for 6+ months"
+          ]
+        }
+      ],
+      "alt": "When a small business is ready for an LLM optimization retainer versus fixing free fundamentals first",
+      "caption": "Four conditions that mean you should spend on fundamentals before a retainer."
+    }
+  ]
+}

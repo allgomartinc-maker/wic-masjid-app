@@ -1,0 +1,83 @@
+{
+  "brand_name": "Bluetarg",
+  "site_url": "https://bluetarg.com",
+  "tagline": "Your Guide to Organic Dog Nutrition",
+
+  "provenance": {
+    "method": "websearch",
+    "pages_read": 0,
+    "date": "2026-08-16",
+    "note": "crawl_site.py exited 3 (egress proxy 403 on CONNECT) and WebFetch returned EGRESS_BLOCKED for bluetarg.com. The profile below is reconstructed from indexed page titles, URLs and search snippets only. No page was read."
+  },
+
+  "topic_alignment_warning": {
+    "severity": "high",
+    "detail": "Bluetarg publishes organic dog nutrition content. The requested article topic ('How Much Does LLM Optimization Cost for Small Businesses?') is unrelated to the brand's subject matter, audience and existing content. Publishing it on this domain would not serve Bluetarg's readers and would dilute the site's topical authority in the eyes of both search engines and AI answer engines.",
+    "recommendation": "Use this run as a pipeline verification only. For a live Bluetarg post, pick a topic in the brand's niche (for example 'How Much Does Organic Dog Food Cost Per Month?'), which would exercise the identical pipeline with matched brand voice and genuinely relevant internal links.",
+    "acknowledged_by_user": true,
+    "acknowledgement_note": "User selected bluetarg.com as the brand and supplied the LLM-optimization topic explicitly as the acceptance test."
+  },
+
+  "audience": {
+    "primary": "Dog owners researching organic and natural feeding choices",
+    "secondary": "New puppy owners comparing food brands and ingredients",
+    "pain_points": [
+      "Uncertain which ingredient claims on packaging are meaningful",
+      "Weighing the cost of organic food against perceived health benefit",
+      "Choosing appropriate nutrition for a puppy's growth stage"
+    ],
+    "confidence": "low"
+  },
+
+  "voice": {
+    "tone": "informational, reassuring, consumer-facing",
+    "person": "second person",
+    "sentence_style": "plain, short, explanatory; low jargon",
+    "reading_level": "grade 8-10",
+    "vocabulary_prefers": ["organic", "natural ingredients", "nutrition", "your dog", "guide"],
+    "vocabulary_avoids": [],
+    "sample_sentences": [],
+    "sample_sentences_note": "EMPTY BY DESIGN. Verbatim sample sentences require reading the site, which the egress policy prevented. The writer must not imitate a voice it has not observed — it fell back to a neutral, plain-spoken advisory register for this run.",
+    "confidence": "low"
+  },
+
+  "offering": {
+    "services": [],
+    "differentiators": [],
+    "proof_points": [],
+    "note": "No services, credentials or client proof were observable. Left empty rather than invented."
+  },
+
+  "internal_links": [
+    { "url": "https://bluetarg.com/", "title": "Bluetarg home", "topic": "brand home", "suggested_anchor": "Bluetarg", "type": "home", "verified": "indexed in search results" },
+    { "url": "https://bluetarg.com/blog/", "title": "Blog", "topic": "article index", "suggested_anchor": "the Bluetarg blog", "type": "blog", "verified": "indexed in search results" },
+    { "url": "https://bluetarg.com/contact/", "title": "Contact", "topic": "contact", "suggested_anchor": "get in touch", "type": "contact", "verified": "indexed in search results" },
+    { "url": "https://bluetarg.com/privacy-policy/", "title": "Privacy Policy", "topic": "legal", "suggested_anchor": "privacy policy", "type": "legal", "verified": "indexed in search results" }
+  ],
+  "internal_links_note": "Only four URLs could be confirmed to exist, none topically related to the article. The article links to the three non-legal pages so that every link resolves to a real page, but topical relevance is unattainable for this topic/brand pairing. This is a direct consequence of the mismatch above, not a writer defect.",
+
+  "existing_blog_topics": [
+    "Best organic dog food for puppies",
+    "Organic dog food benefits",
+    "Natural ingredients"
+  ],
+  "observed_taxonomy": {
+    "categories": ["babies", "toddlers", "sensory-play"],
+    "tags": ["naturalingredients"],
+    "note": "The 'babies', 'toddlers' and 'sensory-play' categories do not match the dog-nutrition positioning, which suggests the site was repurposed from an earlier niche or uses a shared theme's demo taxonomy. Worth cleaning up — stale off-topic taxonomy weakens topical authority."
+  },
+
+  "cannibalisation_risk": [],
+  "cannibalisation_note": "No existing Bluetarg URL targets 'llm optimization cost' or any variant, so there is no cannibalisation risk for this article.",
+
+  "brand_colors": [],
+  "cta": { "primary": "", "url": "" },
+  "cta_note": "No CTA observable from search data. The article closes with a neutral next-step rather than an invented offer.",
+
+  "platform": {
+    "cms": "WordPress",
+    "evidence": "URL structure (/category/, /tag/), a Privacy Policy describing comment-based data collection in WordPress's default wording, and /wp-sitemap.xml-style indexing"
+  },
+
+  "confidence": "low"
+}

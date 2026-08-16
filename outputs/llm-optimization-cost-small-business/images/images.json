@@ -1,0 +1,53 @@
+{
+  "images": [
+    {
+      "filename": "llm-optimization-cost-small-business.png",
+      "path": "outputs/llm-optimization-cost-small-business/images/llm-optimization-cost-small-business.png",
+      "type": "featured",
+      "role": "featured",
+      "alt": "Guide to LLM optimization costs for small businesses in 2026",
+      "title": "How Much Does LLM Optimization Cost for Small Businesses?",
+      "caption": "",
+      "width": 1200,
+      "height": 630,
+      "bytes": 44988
+    },
+    {
+      "filename": "llm-optimization-cost-by-delivery-model.png",
+      "path": "outputs/llm-optimization-cost-small-business/images/llm-optimization-cost-by-delivery-model.png",
+      "type": "bar_chart",
+      "role": "supporting",
+      "alt": "Monthly LLM optimization cost 2026: DIY $29-250, freelancer $500-2,000, AI-assisted $800-999, agency $1,500-5,000",
+      "title": "Monthly cost by delivery model",
+      "caption": "Top of the published monthly range for each delivery model, 2026.",
+      "width": 1200,
+      "height": 800,
+      "bytes": 50051
+    },
+    {
+      "filename": "llm-optimization-cost-factors.png",
+      "path": "outputs/llm-optimization-cost-small-business/images/llm-optimization-cost-factors.png",
+      "type": "checklist",
+      "role": "supporting",
+      "alt": "Five factors driving LLM optimization price: engine coverage, prompt volume, content output, technical health, markets",
+      "title": "5 factors that move an LLM optimization quote",
+      "caption": "The five variables that explain most of the gap between two quotes.",
+      "width": 1200,
+      "height": 800,
+      "bytes": 51762
+    },
+    {
+      "filename": "llm-optimization-ready-or-wait.png",
+      "path": "outputs/llm-optimization-cost-small-business/images/llm-optimization-ready-or-wait.png",
+      "type": "comparison",
+      "role": "supporting",
+      "alt": "When a small business is ready for an LLM optimization retainer versus fixing free fundamentals first",
+      "title": "Ready to buy, or fix the free things first?",
+      "caption": "Four conditions that mean you should spend on fundamentals before a retainer.",
+      "width": 1200,
+      "height": 800,
+      "bytes": 62691
+    }
+  ],
+  "failures": []
+}

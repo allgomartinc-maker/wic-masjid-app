@@ -1,0 +1,227 @@
+{
+  "mode": "dry-run",
+  "site": "<WP_SITE_URL not set>",
+  "status_to_be_created": "draft",
+  "image_count": 4,
+  "content_bytes": 21157,
+  "requests": [
+    {
+      "step": "upload media 1/4",
+      "method": "POST",
+      "url": "<WP_SITE_URL>/wp-json/wp/v2/media",
+      "headers": {
+        "Authorization": "Basic <WP_USERNAME:WP_APP_PASSWORD redacted>",
+        "Content-Disposition": "attachment; filename=\"llm-optimization-cost-small-business.png\"",
+        "Content-Type": "image/png"
+      },
+      "body": "<binary 44988 bytes from outputs/llm-optimization-cost-small-business/images/llm-optimization-cost-small-business.png>",
+      "follow_up": {
+        "method": "POST",
+        "url": "<WP_SITE_URL>/wp-json/wp/v2/media/<new_id>",
+        "json": {
+          "alt_text": "Guide to LLM optimization costs for small businesses in 2026",
+          "title": "How Much Does LLM Optimization Cost for Small Businesses?",
+          "caption": ""
+        }
+      }
+    },
+    {
+      "step": "upload media 2/4",
+      "method": "POST",
+      "url": "<WP_SITE_URL>/wp-json/wp/v2/media",
+      "headers": {
+        "Authorization": "Basic <WP_USERNAME:WP_APP_PASSWORD redacted>",
+        "Content-Disposition": "attachment; filename=\"llm-optimization-cost-by-delivery-model.png\"",
+        "Content-Type": "image/png"
+      },
+      "body": "<binary 50051 bytes from outputs/llm-optimization-cost-small-business/images/llm-optimization-cost-by-delivery-model.png>",
+      "follow_up": {
+        "method": "POST",
+        "url": "<WP_SITE_URL>/wp-json/wp/v2/media/<new_id>",
+        "json": {
+          "alt_text": "Monthly LLM optimization cost 2026: DIY $29-250, freelancer $500-2,000, AI-assisted $800-999, agency $1,500-5,000",
+          "title": "Monthly cost by delivery model",
+          "caption": "Top of the published monthly range for each delivery model, 2026."
+        }
+      }
+    },
+    {
+      "step": "upload media 3/4",
+      "method": "POST",
+      "url": "<WP_SITE_URL>/wp-json/wp/v2/media",
+      "headers": {
+        "Authorization": "Basic <WP_USERNAME:WP_APP_PASSWORD redacted>",
+        "Content-Disposition": "attachment; filename=\"llm-optimization-cost-factors.png\"",
+        "Content-Type": "image/png"
+      },
+      "body": "<binary 51762 bytes from outputs/llm-optimization-cost-small-business/images/llm-optimization-cost-factors.png>",
+      "follow_up": {
+        "method": "POST",
+        "url": "<WP_SITE_URL>/wp-json/wp/v2/media/<new_id>",
+        "json": {
+          "alt_text": "Five factors driving LLM optimization price: engine coverage, prompt volume, content output, technical health, markets",
+          "title": "5 factors that move an LLM optimization quote",
+          "caption": "The five variables that explain most of the gap between two quotes."
+        }
+      }
+    },
+    {
+      "step": "upload media 4/4",
+      "method": "POST",
+      "url": "<WP_SITE_URL>/wp-json/wp/v2/media",
+      "headers": {
+        "Authorization": "Basic <WP_USERNAME:WP_APP_PASSWORD redacted>",
+        "Content-Disposition": "attachment; filename=\"llm-optimization-ready-or-wait.png\"",
+        "Content-Type": "image/png"
+      },
+      "body": "<binary 62691 bytes from outputs/llm-optimization-cost-small-business/images/llm-optimization-ready-or-wait.png>",
+      "follow_up": {
+        "method": "POST",
+        "url": "<WP_SITE_URL>/wp-json/wp/v2/media/<new_id>",
+        "json": {
+          "alt_text": "When a small business is ready for an LLM optimization retainer versus fixing free fundamentals first",
+          "title": "Ready to buy, or fix the free things first?",
+          "caption": "Four conditions that mean you should spend on fundamentals before a retainer."
+        }
+      }
+    },
+    {
+      "step": "resolve categories term",
+      "method": "GET",
+      "url": "<WP_SITE_URL>/wp-json/wp/v2/categories?search=Guides",
+      "on_missing": {
+        "method": "POST",
+        "url": "<WP_SITE_URL>/wp-json/wp/v2/categories",
+        "json": {
+          "name": "Guides"
+        }
+      }
+    },
+    {
+      "step": "resolve tags term",
+      "method": "GET",
+      "url": "<WP_SITE_URL>/wp-json/wp/v2/tags?search=LLM optimization",
+      "on_missing": {
+        "method": "POST",
+        "url": "<WP_SITE_URL>/wp-json/wp/v2/tags",
+        "json": {
+          "name": "LLM optimization"
+        }
+      }
+    },
+    {
+      "step": "resolve tags term",
+      "method": "GET",
+      "url": "<WP_SITE_URL>/wp-json/wp/v2/tags?search=GEO",
+      "on_missing": {
+        "method": "POST",
+        "url": "<WP_SITE_URL>/wp-json/wp/v2/tags",
+        "json": {
+          "name": "GEO"
+        }
+      }
+    },
+    {
+      "step": "resolve tags term",
+      "method": "GET",
+      "url": "<WP_SITE_URL>/wp-json/wp/v2/tags?search=AEO",
+      "on_missing": {
+        "method": "POST",
+        "url": "<WP_SITE_URL>/wp-json/wp/v2/tags",
+        "json": {
+          "name": "AEO"
+        }
+      }
+    },
+    {
+      "step": "resolve tags term",
+      "method": "GET",
+      "url": "<WP_SITE_URL>/wp-json/wp/v2/tags?search=AI search",
+      "on_missing": {
+        "method": "POST",
+        "url": "<WP_SITE_URL>/wp-json/wp/v2/tags",
+        "json": {
+          "name": "AI search"
+        }
+      }
+    },
+    {
+      "step": "resolve tags term",
+      "method": "GET",
+      "url": "<WP_SITE_URL>/wp-json/wp/v2/tags?search=small business",
+      "on_missing": {
+        "method": "POST",
+        "url": "<WP_SITE_URL>/wp-json/wp/v2/tags",
+        "json": {
+          "name": "small business"
+        }
+      }
+    },
+    {
+      "step": "resolve tags term",
+      "method": "GET",
+      "url": "<WP_SITE_URL>/wp-json/wp/v2/tags?search=pricing",
+      "on_missing": {
+        "method": "POST",
+        "url": "<WP_SITE_URL>/wp-json/wp/v2/tags",
+        "json": {
+          "name": "pricing"
+        }
+      }
+    },
+    {
+      "step": "create post",
+      "method": "POST",
+      "url": "<WP_SITE_URL>/wp-json/wp/v2/posts",
+      "headers": {
+        "Authorization": "Basic <redacted>",
+        "Content-Type": "application/json"
+      },
+      "json": {
+        "title": "How Much Does LLM Optimization Cost for Small Businesses?",
+        "content": "<21,157 chars of HTML — see content/article.html>",
+        "status": "draft",
+        "excerpt": "LLM optimization costs small businesses $29 to $5,000 per month in 2026. A breakdown of DIY tools, freelancer, AI-assisted and agency pricing — plus the four conditions under which you should not buy a retainer yet.",
+        "comment_status": "open",
+        "slug": "llm-optimization-cost-small-business",
+        "featured_media": "<media_id of featured image>",
+        "categories": [
+          "<term_ids>"
+        ],
+        "tags": [
+          "<term_ids>"
+        ],
+        "meta": {
+          "_yoast_wpseo_title": "LLM Optimization Cost for Small Business (2026)",
+          "rank_math_title": "LLM Optimization Cost for Small Business (2026)",
+          "_yoast_wpseo_metadesc": "LLM optimization costs small businesses $29-$5,000/month in 2026. Real prices for DIY tools, freelancers and agencies - plus when not to buy.",
+          "rank_math_description": "LLM optimization costs small businesses $29-$5,000/month in 2026. Real prices for DIY tools, freelancers and agencies - plus when not to buy.",
+          "_yoast_wpseo_focuskw": "llm optimization cost",
+          "rank_math_focus_keyword": "llm optimization cost"
+        }
+      }
+    }
+  ],
+  "full_post_payload_without_content": {
+    "title": "How Much Does LLM Optimization Cost for Small Businesses?",
+    "status": "draft",
+    "excerpt": "LLM optimization costs small businesses $29 to $5,000 per month in 2026. A breakdown of DIY tools, freelancer, AI-assisted and agency pricing — plus the four conditions under which you should not buy a retainer yet.",
+    "comment_status": "open",
+    "slug": "llm-optimization-cost-small-business",
+    "featured_media": "<media_id of featured image>",
+    "categories": [
+      "<term_ids>"
+    ],
+    "tags": [
+      "<term_ids>"
+    ],
+    "meta": {
+      "_yoast_wpseo_title": "LLM Optimization Cost for Small Business (2026)",
+      "rank_math_title": "LLM Optimization Cost for Small Business (2026)",
+      "_yoast_wpseo_metadesc": "LLM optimization costs small businesses $29-$5,000/month in 2026. Real prices for DIY tools, freelancers and agencies - plus when not to buy.",
+      "rank_math_description": "LLM optimization costs small businesses $29-$5,000/month in 2026. Real prices for DIY tools, freelancers and agencies - plus when not to buy.",
+      "_yoast_wpseo_focuskw": "llm optimization cost",
+      "rank_math_focus_keyword": "llm optimization cost"
+    }
+  }
+}
